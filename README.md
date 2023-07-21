@@ -50,3 +50,26 @@ Move up one folder from the rp2040-boilerplate folder and rename it with the fol
 ```
 mv rp2040-boilerplate new-project-name
 ```
+
+# Building
+
+## Before building
+
+The project needs to know where the pico-sdk is located.
+
+```
+export PICO_SDK_PATH="path/to/pico-sdk/"
+```
+
+This is only required once for every shell.
+
+## Using CMake
+```
+mkdir build
+cd build
+cmake ..
+```
+This needs to be done everytime a new file is added. In addition, the file has to be added in src/CMakeLists.txt.
+
+## Using make
+Build the binary by using `make` while inside the build folder.
